@@ -1,0 +1,236 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOvksH2Ebn6balIMdi/lWJH",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/LouanMartinez/Dataframe-Exercise/blob/main/1-3\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "\n",
+        "import pandas as pd\n",
+        "\n",
+        "\n",
+        "\n",
+        "# Step 1: Create DataFrame\n",
+        "\n",
+        "\n",
+        "data = {\n",
+        "\n",
+        "    \"OrderID\": range(1001, 1021),\n",
+        "\n",
+        "    \"Product\": [\n",
+        "\n",
+        "        \"Laptop\", \"Mouse\", \"Keyboard\", \"Monitor\", \"Laptop\",\n",
+        "\n",
+        "        \"Headphones\", \"Mouse\", \"Chair\", \"Desk\", \"Laptop\",\n",
+        "\n",
+        "        \"Printer\", \"Keyboard\", \"Monitor\", \"Mouse\", \"Laptop\",\n",
+        "\n",
+        "        \"Headphones\", \"Desk\", \"Monitor\", \"Printer\", \"Chair\"\n",
+        "\n",
+        "    ],\n",
+        "\n",
+        "    \"Category\": [\n",
+        "\n",
+        "        \"Electronics\", \"Accessories\", \"Accessories\", \"Electronics\", \"Electronics\",\n",
+        "\n",
+        "        \"Accessories\", \"Accessories\", \"Furniture\", \"Furniture\", \"Electronics\",\n",
+        "\n",
+        "        \"Electronics\", \"Accessories\", \"Electronics\", \"Accessories\", \"Electronics\",\n",
+        "\n",
+        "        \"Accessories\", \"Furniture\", \"Electronics\", \"Electronics\", \"Furniture\"\n",
+        "\n",
+        "    ],\n",
+        "\n",
+        "    \"Quantity\": [2, 5, 3, 4, 1, 6, 10, 2, 1, 3, 2, 4, 2, 7, 5, 3, 2, 4, 1, 6],\n",
+        "\n",
+        "    \"Price\": [800, 20, 50, 200, 850, 40, 25, 150, 300, 900, 120, 55, 250, 20, 750, 35, 280, 220, 110, 180],\n",
+        "\n",
+        "    \"Customer\": [\n",
+        "\n",
+        "        \"Alice\", \"Bob\", \"Charlie\", \"Diana\", \"Ethan\",\n",
+        "\n",
+        "        \"Fiona\", \"George\", \"Hannah\", \"Ian\", \"Jane\",\n",
+        "\n",
+        "        \"Kyle\", \"Laura\", \"Mike\", \"Nina\", \"Oscar\",\n",
+        "\n",
+        "        \"Paul\", \"Queen\", \"Robert\", \"Sarah\", \"Tom\"\n",
+        "\n",
+        "    ],\n",
+        "\n",
+        "    \"Region\": [\n",
+        "\n",
+        "        \"North\", \"South\", \"East\", \"West\", \"North\",\n",
+        "\n",
+        "        \"South\", \"East\", \"West\", \"North\", \"South\",\n",
+        "\n",
+        "        \"East\", \"West\", \"North\", \"South\", \"East\",\n",
+        "\n",
+        "        \"West\", \"North\", \"South\", \"East\", \"West\"\n",
+        "\n",
+        "    ]\n",
+        "\n",
+        "}\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 311
+        },
+        "id": "EsnTfyQvq-Gz",
+        "outputId": "4507fe21-51e0-41ad-e05b-8fca06e4f8cb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "AttributeError",
+          "evalue": "'DataFrame' object has no attribute 'column'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-2299011855.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     74\u001b[0m \u001b[0;31m# Step 4: Show column names\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     75\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 76\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Columns:\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mdf\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mcolumn\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/pandas/core/generic.py\u001b[0m in \u001b[0;36m__getattr__\u001b[0;34m(self, name)\u001b[0m\n\u001b[1;32m   6297\u001b[0m         ):\n\u001b[1;32m   6298\u001b[0m             \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mname\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 6299\u001b[0;31m         \u001b[0;32mreturn\u001b[0m \u001b[0mobject\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m__getattribute__\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mname\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   6300\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   6301\u001b[0m     \u001b[0;34m@\u001b[0m\u001b[0mfinal\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mAttributeError\u001b[0m: 'DataFrame' object has no attribute 'column'"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Create DataFrame\n",
+        "\n",
+        "df = pd.DataFrame(data)\n"
+      ],
+      "metadata": {
+        "id": "KZfsT9SisopJ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# Compute Total column\n",
+        "\n",
+        "df[\"Total\"] = df[\"Quantity\"] * df[\"Price\"]"
+      ],
+      "metadata": {
+        "id": "UMLNnB3kskV6"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Step 2: Show first 5 rows\n",
+        "\n",
+        "print(df.head(5))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dPSR0vmascbi",
+        "outputId": "ab8e07c6-30c1-43fe-b64d-a0539ec31888"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "   OrderID   Product     Category  Quantity  Price Customer Region  Total\n",
+            "0     1001    Laptop  Electronics         2    800    Alice  North   1600\n",
+            "1     1002     Mouse  Accessories         5     20      Bob  South    100\n",
+            "2     1003  Keyboard  Accessories         3     50  Charlie   East    150\n",
+            "3     1004   Monitor  Electronics         4    200    Diana   West    800\n",
+            "4     1005    Laptop  Electronics         1    850    Ethan  North    850\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# Step 3: Print DataFrame shape\n",
+        "\n",
+        "print(\"Shape:\", df.shape)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2Z6c5Wd1sGb5",
+        "outputId": "48d47067-a7de-42bc-a640-5fca73c266ef"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Shape: (20, 8)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Step 4: Show column names\n",
+        "\n",
+        "print(\"Columns:\", df.columns)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dVRiLmWEt-ZZ",
+        "outputId": "e04b140c-abda-4973-94a2-5311aa3912dd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Columns: Index(['OrderID', 'Product', 'Category', 'Quantity', 'Price', 'Customer',\n",
+            "       'Region', 'Total'],\n",
+            "      dtype='object')\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
